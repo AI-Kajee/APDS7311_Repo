@@ -14,6 +14,7 @@ try{
     console.log('mongoDB is CONNECTED!!! :)');
 }catch(e){
     console.error(e);
+    console.log('NOT CONNECTED!!! :[');
 }
 
 let db = client.db("users");

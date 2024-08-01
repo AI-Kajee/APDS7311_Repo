@@ -1,6 +1,6 @@
 import express from "express";
 import db from "../db/conn.mjs";
-import {ObjectId} from "mongodb";
+import { ObjectId } from "mongodb";
 
 const router = express.Router();
 
@@ -22,3 +22,4 @@ router.post("/upload", async (req,res) => {
     let result = await collection.insertOne(newDocument);
     res.send(result).status(204);
 });
+export default router;

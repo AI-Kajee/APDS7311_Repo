@@ -2,10 +2,12 @@ import https from "https";
 import http from "http";
 import fs from "fs";
 import posts from "./routes/post.mjs";
+import users from "./routes/user.mjs"
 import express from "express"
 import cors from "cors"
+import brute from "express-brute"
 
-const PORT = 3001;
+const PORT = 3000;
 const app = express();
 
 const options = {
@@ -25,7 +27,9 @@ app.use((reg,res,next)=>{
 
 app.use("/post",posts);
 app.route("/post", posts);
+app.use("/user", users);
+app.use("/user",users)
 
 let server = https.createServer(options, app)
-console.log(PORT)
+
 server.listen(PORT);

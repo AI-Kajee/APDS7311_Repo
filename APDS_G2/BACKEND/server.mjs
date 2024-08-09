@@ -7,7 +7,7 @@ import express from "express"
 import cors from "cors"
 import brute from "express-brute"
 
-const PORT = 3000;
+const PORT = 3001;
 const app = express();
 
 const options = {
